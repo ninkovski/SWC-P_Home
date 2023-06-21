@@ -3997,3 +3997,47 @@ input, select, textarea {
 	body.is-mobile.landing #footer {
 		background-color: #1d242a;
 	}
+/* NUevos */
+.associate-logos {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+
+.logo {
+	text-align: center;
+}
+
+.logo img {
+	width: 100px;
+	height: 100px;
+}
+
+.logo p {
+	margin-top: 10px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.associate-logos {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+
+.logo {
+	text-align: center;
+}
+
+.logo img {
+	width: 100px;
+	height: 100px;
+}
+
+.logo p {
+	margin-top: 10px;
+	font-size: 16px;
+	font-weight: bold;
+}
