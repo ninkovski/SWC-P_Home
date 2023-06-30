@@ -6,7 +6,7 @@
 	#d1add1c1-8dc6-4812-af84-ed10be7bf1db 
 */
 document.getElementById("send-button").addEventListener("click", function() {
-  Email.send({
+  /*Email.send({
     Host : "smtp.elasticemail.com",
     Username : "startwebperu@gmail.com",
     Password : "301C3E484509BF5387F01F39486320E531CE",
@@ -19,6 +19,15 @@ document.getElementById("send-button").addEventListener("click", function() {
   }).catch(function(error) {
     console.error("Error al enviar el correo:", error);
     alert("Error al enviar el correo. Por favor, inténtalo nuevamente.");
-  });
+  });*/
+  Email.send({
+    SecureToken : "60a104f3-47a1-4f81-82f4-abc5a77e14ba",
+    To : 'isa111093@gmail.com',
+    From : "notificaciones@startwebperu.com",
+    Subject : "Hola mi amor soy yo probando correos",
+    Body : "te amo ya funcionan nuestros correos"
+	}).then(
+	message => alert(message)
+	);
 });
 
