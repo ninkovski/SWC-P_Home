@@ -148,7 +148,7 @@
 							<header>
 								<h4>MPV Pack</h4>
 								<p>Por tiempo limitado: crea tu página web a mitad de precio $100
-									<strike>$200</strike>
+									(Antes <strike>$200</strike>)
 								</p>
 							</header>
 						</div>
@@ -180,7 +180,7 @@
 							<section>
 								<form method="post" action="#">
 									<div class="row gtr-uniform">
-										<div class="col-6 col-12-xsmall">
+										<div class="col-12 col-12-xsmall">
 											<input type="text" name="demo-name" id="demo-name" value=""
 												placeholder="Escribe tu Nombre" />
 										</div>
@@ -188,14 +188,18 @@
 											<input type="email" name="demo-email" id="demo-email" value=""
 												placeholder="Ingresa tu Correo" />
 										</div>
+										<div class="col-6 col-12-xsmall">
+											<input type="text" name="demo-nro" id="demo-nro" value="" 
+											placeholder="Ingresa tu Número de Celular" />
+										</div>
 										<div class="col-12">
 											<textarea name="demo-message" id="demo-message"
 												placeholder="Dejanos un mensaje" rows="6"></textarea>
 										</div>
 										<div class="col-12">
-												 <input type="submit" value="Envianos un Correo"
-														class="primary"
-														/>
+												 
+												<button class="primary" id="send-button">Envianos un Correo</button>
+
 												<input type="reset" value="Conversemos por WhatsApp" />
 											
 										</div>
@@ -227,11 +231,9 @@
 						</div>
 					</div>
 				</div>
-				<button id="send-button">Enviar correo</button>
-
 			</section>
 			<!-- Footer -->
-			<footer id="footer">
+			<!-- <footer id="footer">
 				<ul class="icons">
 					<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 					<li><a href="#" class="icon brands fa-facebook-f"><span
@@ -244,16 +246,18 @@
 					<li>&copy; Derechos reservados 2023 </li>
 					<li>@StarWebConsulting - Perú</li>
 				</ul>
-			</footer>
-
+			</footer>-->
+			<div id="footer-container"></div>
 		</div>
 
 		<!-- Scripts -->
+		<script src="assets/js/form.valid.js"></script>
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/jquery.scrollex.min.js"></script>
 		<script src="assets/js/jquery.scrolly.min.js"></script>
 		<script src="assets/js/browser.min.js"></script>
 		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/components.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
 		<script src="assets/js/mail.js"></script>

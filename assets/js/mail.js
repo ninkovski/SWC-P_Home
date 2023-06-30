@@ -3,31 +3,38 @@
 	StartWebPerú | @ninkovski
 	Componente nuevo para envio de correos con https://smtpjs.com/
 	<script src="https://smtpjs.com/v3/smtp.js"></script>
-	#d1add1c1-8dc6-4812-af84-ed10be7bf1db 
 */
-document.getElementById("send-button").addEventListener("click", function() {
-  /*Email.send({
-    Host : "smtp.elasticemail.com",
-    Username : "startwebperu@gmail.com",
-    Password : "301C3E484509BF5387F01F39486320E531CE",
-    To : 'ninkovski03@gmail.com',
-    From : "notificaciones@startwebperu.com",
-    Subject : "Primer Email de Prueba",
-    Body : "Tenemos que implementar un cuerpo"
-  }).then(function(message) {
-    alert("Correo enviado con éxito");
-  }).catch(function(error) {
-    console.error("Error al enviar el correo:", error);
-    alert("Error al enviar el correo. Por favor, inténtalo nuevamente.");
-  });*/
-  Email.send({
-    SecureToken : "60a104f3-47a1-4f81-82f4-abc5a77e14ba",
-    To : 'isa111093@gmail.com',
-    From : "notificaciones@startwebperu.com",
-    Subject : "Hola mi amor soy yo probando correos",
-    Body : "te amo ya funcionan nuestros correos"
+import { emailParams, emailWelcome, validMessage } from './config.js';
+
+document.getElementById("send-button").addEventListener("click", function (event) {
+	event.preventDefault();
+
+	var name = document.getElementById("demo-name").value;
+	var email = document.getElementById("demo-email").value;
+	var message = document.getElementById("demo-message").value;
+	var nro = document.getElementById("demo-nro").value;
+
+	//Validaciones 
+	var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+	if (!emailRegex.test(email)) {
+		alert(validMessage.ImputMailInvalid);
+		return;
+	}
+
+	var phoneRegex = /^\d{9}$/;
+	if (!phoneRegex.test(nro)) {
+		alert(validMessage.ImputPhoneInvalid);
+		return;
+	}
+
+	Email.send({
+		SecureToken: emailParams.SecureToken,
+		To: email,
+		From: emailParams.From,
+		Subject: emailWelcome.Subject,
+		Body: emailWelcome.Body
 	}).then(
-	message => alert(message)
+		message => alert(message)
 	);
 });
 
