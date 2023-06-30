@@ -11,7 +11,7 @@ document.getElementById("send-button").addEventListener("click", function() {
     Username : "startwebperu@gmail.com",
     Password : "301C3E484509BF5387F01F39486320E531CE",
     To : 'ninkovski03@gmail.com',
-    From : "startwebperu@gmail.com",
+    From : "notificaciones@startwebperu.com",
     Subject : "Primer Email de Prueba",
     Body : "Tenemos que implementar un cuerpo"
   }).then(function(message) {
