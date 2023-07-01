@@ -4,7 +4,9 @@
 	Componente nuevo para envio de correos con https://smtpjs.com/
 	<script src="https://smtpjs.com/v3/smtp.js"></script>
 */
-import { emailParams, emailWelcome, validMessage } from './config.js';
+import { emailParams } from '../config';
+import { validMessage } from '../params/messages';
+import { emailWelcome } from '../params/mail';
 
 document.getElementById("send-button").addEventListener("click", function (event) {
 	event.preventDefault();
