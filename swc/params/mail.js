@@ -3,6 +3,7 @@
     StartWebPerú | @ninkovski
 */
 export const emailWelcome = {
-    Subject: "Start Web Perú te saluda!."
+    Subject: "Start Web Perú te saluda!.",
+    Body: "Gracias por contactarnos."
 };
 
